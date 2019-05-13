@@ -1,10 +1,15 @@
-import React from 'react';
-import './App.css';
-import { Home, About, Contact, Navigation } from './components';
+import React from "react";
+import { Route } from "react-router-dom";
+import "./App.css";
+import { Home, About, Contact, Navigation } from "./components";
 
 const App = () => (
   <div>
-    <Navigation />
+    <Navigation>
+      <Route exact path="/" componant={Home} />
+      <Route path="/about" componant={About} />
+      <Route path="/contact" componant={Contact} />
+    </Navigation>
   </div>
 );
 
